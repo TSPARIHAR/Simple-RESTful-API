@@ -108,22 +108,28 @@ Provide API documentation, including how to use each endpoint and example reques
     }
     ```
 
-### 4. Update a Task
-- **Endpoint**: `PUT /tasks/:id`
-- **Description**: Update a task by ID.
-- **Request Body**:
-  ```json
-  {
-    "title": "Updated Task",
-    "description": "This task has been updated.",
-    "completed": true
-  }
+  ### 4. Update a Task
+- **Response**:
+  - **Status**: 200 OK
+  - **Body**:
+    ```json
+    {
+      "id": 1,
+      "title": "Updated Task",
+      "description": "This task has been updated.",
+      "completed": true
+    }
+    ```
 
-  ```json
-  {
-    "title": "Sample Task",
-    "description": "This is a sample task.",
-    "completed": false
-  }
-  ```
-  
+### 5. Delete a Task
+- **Endpoint**: `DELETE /tasks/:id`
+- **Description**: Remove a task by ID.
+- **Response**:
+  - **Status**: 204 No Content (if successful) or 404 Not Found (if not found)
+
+## Getting Started
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/TSPARIHAR/Simple-RESTful-API.git
+   cd Simple-RESTful-API
+
