@@ -58,12 +58,67 @@ Implement CRUD operations for managing tasks:
 ### 6. Documentation
 Provide API documentation, including how to use each endpoint and example requests/responses.
 
-## API Endpoints
+- ## API Endpoints
 
 ### 1. Create a Task
 - **Endpoint**: `POST /tasks`
 - **Description**: Add a new task.
+- **Response**:
+  - **Status**: 201 Created
+  - **Body**:
+    ```json
+    {
+      "id": 1,
+      "title": "Sample Task",
+      "description": "This is a sample task.",
+      "completed": false
+    }
+    ```
+
+### 2. Get All Tasks
+- **Endpoint**: `GET /tasks`
+- **Description**: Retrieve all tasks.
+- **Response**:
+  - **Status**: 200 OK
+  - **Body**:
+    ```json
+    [
+      {
+        "id": 1,
+        "title": "Sample Task",
+        "description": "This is a sample task.",
+        "completed": false
+      },
+      ...
+    ]
+    ```
+
+### 3. Get a Task by ID
+- **Endpoint**: `GET /tasks/:id`
+- **Description**: Retrieve a specific task by ID.
+- **Response**:
+  - **Status**: 200 OK (if found) or 404 Not Found (if not found)
+  - **Body** (if found):
+    ```json
+    {
+      "id": 1,
+      "title": "Sample Task",
+      "description": "This is a sample task.",
+      "completed": false
+    }
+    ```
+
+### 4. Update a Task
+- **Endpoint**: `PUT /tasks/:id`
+- **Description**: Update a task by ID.
 - **Request Body**:
+  ```json
+  {
+    "title": "Updated Task",
+    "description": "This task has been updated.",
+    "completed": true
+  }
+
   ```json
   {
     "title": "Sample Task",
