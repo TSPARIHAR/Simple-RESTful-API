@@ -89,7 +89,6 @@ Provide API documentation, including how to use each endpoint and example reques
         "description": "This is a sample task.",
         "completed": false
       },
-      ...
     ]
     ```
 
